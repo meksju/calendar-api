@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
-    "start": "concurrently \"tsc --watch\" \"node ./dist/index.js\""
+    "start": "nodemon --watch \"./src/**/*\" -e ts --exec \"npx ts-node src/app.ts\""
   },
   "author": "",
   "license": "ISC",
