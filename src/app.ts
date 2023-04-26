@@ -11,10 +11,10 @@ const PORT: string | number = process.env.PORT || 4000
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
 app.use(cors({
-    origin: "https://calendar-5al7.onrender.com",
-    headers: ["Content-Type"],
-    credentials: true,
-}));
+    origin: "https://calendar-5al7.onrender.com"
+}
+))
+app.options('*', cors())
 app.use(express.static(__dirname + '/public'));
 app.use(eventRoutes)
 
